@@ -10,7 +10,7 @@ int main(){
 	char *c= "World";
 	char *d;
 	char *file1="e.bin";
-	char *file2="e.txt";
+	//char *file2="e.txt";
 	//int size;
 	//int sizes[2];
 	int e[4][3]={{1,2,3},{4,5,6},{7,8,9},{10,11,12}};
@@ -68,7 +68,7 @@ free(d);
  //apply the function to array e and file1
  //*******************************************************
 
-void arrayWrite(int *e[4][3], int size, char* file){
+void arrayWrite(int *e[4][3], int size, char** file){
 	for(int i =0; i<size; i++) {
 		for(int j=0; j<3; j++) {
 			fprintf(file, "%d\n", e[i][j]);
@@ -90,20 +90,20 @@ arrayWrite(*e,4, &file1);
  //run the function with parameters e,file1, file2
  //so at the end of this there should be two new files
   //*******************************************************
-void binaryIO(char* fileIN, char* fileOUT) {
+//void binaryIO(char* fileIN, char* fileOUT) {
 	
-	char text[64];
-	char *endpnt;
+//	char text[64];
+//	char *endpnt;
 	
-	FILE fp = fopen(fileIN, "r");
-	FILE fpOUT = fopen(fileOUT, "w");
-	if(fp==NULL)exit(1);
-	fread(fpOUT, 1, sizeof(int),  fp);
-	fprintf(stdout, "%d, %d\n", text, text);	
+//	FILE fp = fopen(fileIN, "r");
+//	FILE fpOUT = fopen(fileOUT, "w");
+//	if(fp==NULL)exit(1);
+//	fread(fpOUT, 1, sizeof(int),  fp);
+//	fprintf(stdout, "%d, %d\n", text, text);	
 	
-}
+//}
 
-binaryIO(&file1, &file2);
+//binaryIO(&file1, &file2);
  //******************************************************* 
  //2 marks
  //malloc and assign memory for	f as a pointer to pointers to integer style array of the same size as e
